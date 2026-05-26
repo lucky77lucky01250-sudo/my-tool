@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My AI Tools</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #0f0f13;
+      color: #e8e8f0;
+      line-height: 1.6;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: radial-gradient(ellipse at 50% 0%, #1a1a40 0%, #0f0f13 70%);
+    }
+
+    .hero__badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #7c6fcd;
+      border: 1px solid #7c6fcd44;
+      border-radius: 999px;
+      padding: 0.3rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__title {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #c9b8ff 0%, #7c6fcd 50%, #4f8ef7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero__subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #9090b0;
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__cta {
+      display: inline-block;
+      padding: 0.85rem 2.25rem;
+      background: linear-gradient(135deg, #7c6fcd, #4f8ef7);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .hero__cta:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    /* ── Tools Grid ── */
+    .tools {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #9090b0;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #16161f;
+      border: 1px solid #2a2a3a;
+      border-radius: 1rem;
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: #7c6fcd66; transform: translateY(-4px); }
+
+    .card__icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card__desc {
+      font-size: 0.9rem;
+      color: #9090b0;
+    }
+
+    .card__tag {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #7c6fcd;
+      border: 1px solid #7c6fcd44;
+      border-radius: 999px;
+      padding: 0.2rem 0.7rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      color: #555570;
+      font-size: 0.85rem;
+      border-top: 1px solid #1e1e2a;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <span class="hero__badge">✦ My AI Tools</span>
+    <h1 class="hero__title">AIで仕事を<br>10倍速くする</h1>
+    <p class="hero__subtitle">日々の業務を自動化・効率化するために作ったAIツール集。副業・物販・コンテンツ制作まで幅広くカバー。</p>
+    <a href="#tools" class="hero__cta">ツールを見る</a>
+  </section>
+
+  <section class="tools" id="tools">
+    <h2 class="section-title">ツール一覧</h2>
+    <p class="section-sub">目的に合わせて使えるAIツールを揃えました</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card__icon">👗</div>
+        <div class="card__title">古着出品ジェネレーター</div>
+        <div class="card__desc">写真を元に商品タイトル・説明文を自動生成。メルカリへの出品作業を大幅に短縮します。</div>
+        <span class="card__tag">物販</span>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">📊</div>
+        <div class="card__title">在庫・売上管理</div>
+        <div class="card__desc">仕入れ〜売上までを一元管理。利益率・回転率をリアルタイムで把握できます。</div>
+        <span class="card__tag">管理</span>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">🧾</div>
+        <div class="card__title">勘定科目 自動振分</div>
+        <div class="card__desc">取引内容からMFクラウド用の勘定科目を自動で判定。確定申告の入力作業を効率化。</div>
+        <span class="card__tag">税務</span>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">⚖️</div>
+        <div class="card__title">副業法務アドバイザー</div>
+        <div class="card__desc">副業・個人ビジネスの法的リスクをチェックし、合法的な代替案を提示します。</div>
+        <span class="card__tag">法務</span>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">💡</div>
+        <div class="card__title">AI活用プランナー</div>
+        <div class="card__desc">ChatGPT・Claude・画像生成AIを組み合わせた収益化プランを最短ルートで設計します。</div>
+        <span class="card__tag">戦略</span>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">🤖</div>
+        <div class="card__title">AIエージェントチーム</div>
+        <div class="card__desc">PM・法務・税務・品質管理など専門ロールのAIエージェントが連携して業務を完遂します。</div>
+        <span class="card__tag">自動化</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 My AI Tools — Built with Claude Code</p>
+  </footer>
+
+</body>
+</html>
